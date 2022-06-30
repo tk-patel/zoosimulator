@@ -106,8 +106,8 @@ else {
       <?php foreach($zooAnimals as $animal){ ?>
         <div class="col my-2">
           <?= $animal->getName() ?> <br />
-          (Max: <?= $animal->getMaxLife() ?>, Min: <?= $animal->getDeathLevelPoints() ?>)<br />
-          Current Health: <?= $animal->getHealthPoints() ?> <br />
+          Max Health: <?= $animal->getMaxLife() ?>,<br />Death Below: <?= $animal->getDeathLevelPoints() ?><br />
+          <u>Current Health: <?= $animal->getHealthPoints() ?> </u><br />
           <span class="<?php echo ($animal->getHealth() == Animal::STATUS_DEAD ? 'text-danger' : ($animal->getHealth() == Elephant::STATUS_CRITICAL ? 'text-warning' : 'text-success')) ?>"><?= $animal->getHealth() ?></span>
         </div>
       <?php } ?>

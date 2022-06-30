@@ -19,7 +19,7 @@ class Animal
         $this->type = $type;
         $this->maxLife = $healthPoints;
         $this->health = $this::STATUS_ALIVE;
-        $this->healthPoints = floor($healthPoints); //Not taking Decimals at the moment
+        $this->healthPoints = round($healthPoints, 2); //Not taking Decimals at the moment
     }
 
     public function getName()
@@ -42,7 +42,7 @@ class Animal
 
     public function setHealthPoints($healthPoints)
     {
-        $this->healthPoints = floor($healthPoints); //Not taking Decimals at the moment
+        $this->healthPoints = round($healthPoints, 2); //Not taking Decimals at the moment
     }
 
     public function getDeathLevelPoints()
@@ -52,7 +52,7 @@ class Animal
 
     public function setDeathLevelPoints($deadHealthPoints)
     {
-        $this->deathLevelPoints = $deadHealthPoints;
+        $this->deathLevelPoints = round($deadHealthPoints, 2);
     }
 
     public function getHealth()
